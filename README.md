@@ -68,5 +68,5 @@ Edit your own file in `route_finder/algorithms/`. It must expose
 | Method | Owner | Status |
 |---|---|---|
 | DFS, BFS | Ahmed | done, tested |
-| GBFS, AS, CUS2 | Ramy | stub |
+| GBFS, AS, CUS2 | Ramy | done, tested |
 | CUS1 | Faisal | stub |
