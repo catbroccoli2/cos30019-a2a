@@ -1,29 +1,33 @@
 """A* Search (AS) - informed. Owner: Person B.
 
-TODO (Person B): replace the body of `search` below.
+A* expands the frontier node with the lowest estimated total cost:
 
-Evaluation function: f(n) = g(n) + h(n), where g(n) is `node.path_cost`.
+    f(n) = g(n) + h(n)
 
-Hints
------
-* Reuse the heuristic from `route_finder/heuristics.py` (shared with GBFS).
-* Reuse the shared framework:
+where g(n) is the cost of the path so far (`node.path_cost`) and h(n) is the
+straight-line distance from n to the nearest destination.
 
-      return run_search(problem, PriorityFrontier(lambda n: n.path_cost + h(problem, n.state)))
+Optimality: the goal test happens when a node is popped (see engine.py), and
+h never overestimates when every edge costs at least its straight-line length
+(checked with `heuristics.underestimated_edges`). Under that condition the
+first goal popped is a lowest-cost path. The sample file satisfies it.
 
-* Check admissibility: an edge's cost can be larger than the straight-line
-  distance between its end points, which is fine, but it must never be
-  SMALLER, otherwise Euclidean distance can overestimate and A* may not be
-  optimal. Check this on the sample file and mention it in the report.
-* The sample file has a genuine tie (2->3->5 and 2->1->4 both cost 10); the
-  tie-break rules decide the answer, so this is a good test case.
+Ties on f are broken by lower node number, then by earlier insertion into the
+frontier, inside `PriorityFrontier`.
+
+Sample file: 2 -> 3 -> 5 and 2 -> 1 -> 4 both cost 10, so f = 10 for both
+goal nodes. Rule 1 picks node 4: goal 4, 8 nodes, 2 -> 1 -> 4.
 """
 
 from __future__ import annotations
 
-from ..engine import SearchResult
+from ..engine import SearchResult, run_search
+from ..frontier import PriorityFrontier
+from ..heuristics import straight_line_heuristic
 from ..problem import Problem
 
 
 def search(problem: Problem) -> SearchResult:
-    raise NotImplementedError("AS (A*) is not implemented yet (Person B).")
+    """Run A* tree search on `problem`."""
+    h = straight_line_heuristic(problem)
+    return run_search(problem, PriorityFrontier(lambda node: node.path_cost + h(node.state)))
