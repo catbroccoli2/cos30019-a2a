@@ -69,4 +69,5 @@ Edit your own file in `route_finder/algorithms/`. It must expose
 |---|---|---|
 | DFS, BFS | Ahmed | done, tested |
 | GBFS, AS, CUS2 | Ramy | done, tested |
-| CUS1 | Faisal | stub |
+| CUS1 | Faisal | done, tested |
+| Tests and reports | Omar | done, tested |
