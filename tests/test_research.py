@@ -28,6 +28,8 @@ def walk_cost(problem, walk):
 
 
 class SampleTests(unittest.TestCase):
+    """The research feature on the assignment sample file, with every solver."""
+
     def test_sample_file_every_solver(self):
         problem = parse_problem_file(SAMPLE)
         for solver in SOLVERS:
@@ -37,6 +39,8 @@ class SampleTests(unittest.TestCase):
 
 
 class EdgeCaseTests(unittest.TestCase):
+    """Unusual inputs: one-way costs, unreachable stops, duplicates and a listed origin."""
+
     def test_one_way_costs_decide_the_order(self):
         # 1->2 and 2->3 are cheap but 3->2 is expensive, so visit 2 before 3.
         problem = make_problem([(1, 2, 1), (2, 3, 1), (3, 2, 50), (3, 1, 1), (2, 1, 50)],
@@ -89,6 +93,8 @@ class EdgeCaseTests(unittest.TestCase):
 
 
 class SolverAgreementTests(unittest.TestCase):
+    """The exact solvers must agree with each other and with an independent oracle."""
+
     def test_all_exact_solvers_find_the_same_cost(self):
         for seed in range(40):
             for count in (1, 2, 3, 5):
@@ -126,6 +132,8 @@ class SolverAgreementTests(unittest.TestCase):
 
 
 class GeneratorTests(unittest.TestCase):
+    """The random problem generator: repeatable, parseable and always connected."""
+
     def test_same_seed_same_problem(self):
         self.assertEqual(to_problem_text(random_problem(15, 3, seed=4)),
                          to_problem_text(random_problem(15, 3, seed=4)))

@@ -52,10 +52,12 @@ class PairwiseDistances:
 
     @property
     def origin(self) -> int:
+        """The origin node (always the first point)."""
         return self.points[0]
 
     @property
     def destinations(self) -> List[int]:
+        """The destinations to visit: unique, ascending, origin excluded."""
         return self.points[1:]
 
     def distance(self, source: int, target: int) -> Cost:

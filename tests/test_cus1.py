@@ -20,6 +20,8 @@ SAMPLE = ROOT / "tests" / "cases" / "PathFinder-test.txt"
 
 
 class Cus1SampleTests(unittest.TestCase):
+    """CUS1 on the assignment sample, including how its nodes are counted."""
+
     def test_sample_file(self):
         result = cus1.search(parse_problem_file(SAMPLE))
         self.assertEqual((result.goal, result.nodes_created, result.path, result.cost),
@@ -33,6 +35,8 @@ class Cus1SampleTests(unittest.TestCase):
 
 
 class Cus1BehaviourTests(unittest.TestCase):
+    """CUS1 on small hand-built graphs: cycles, one-way edges, ties and dead ends."""
+
     def test_origin_is_destination(self):
         result = cus1.search(make_problem([(1, 2, 1)], origin=1, destinations=[1]))
         self.assertEqual((result.goal, result.nodes_created, result.path), (1, 1, [1]))
@@ -72,6 +76,8 @@ class Cus1BehaviourTests(unittest.TestCase):
 
 
 class Cus1AgainstOtherMethodsTests(unittest.TestCase):
+    """CUS1 compared with BFS and checked for valid output on random graphs."""
+
     def test_same_number_of_moves_as_bfs_on_random_graphs(self):
         for seed in range(40):
             problem = random_problem(12, destination_count=2, seed=seed)

@@ -150,10 +150,12 @@ def _write_csv(name: str, rows: List[Dict[str, object]]) -> Path:
 
 
 def _median(values: List[float]) -> str:
+    """Median as a whole-number string for the summary tables, or "-" when there is no data."""
     return f"{statistics.median(values):.0f}" if values else "-"
 
 
 def _print_algorithm_summary(rows: List[Dict[str, object]]) -> None:
+    """Print median nodes created per method and graph size, for each scenario."""
     methods = [m for m in METHODS if any(r["method"] == m and r["status"] != "not_implemented"
                                          for r in rows)]
     for scenario in SCENARIOS:
@@ -172,12 +174,14 @@ def _print_algorithm_summary(rows: List[Dict[str, object]]) -> None:
 
 
 def _print_research_summary(rows: List[Dict[str, object]]) -> None:
+    """Print the median time of each visit-all solver for every number of destinations."""
     print("\nMedian seconds per solver (blank = not run at that size)")
     print("k  | pairwise |     perm |       dp |      ucs | ucs states")
     for count in RESEARCH_DESTINATION_COUNTS:
         group = [r for r in rows if r["destinations"] == count]
 
         def med(key: str) -> str:
+            """Median of one timing column for this group, blank if the solver was not run."""
             values = [float(r[key]) for r in group if r.get(key, "") != ""]
             return f"{statistics.median(values):.4f}" if values else ""
 
