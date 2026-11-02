@@ -47,7 +47,7 @@ Run the unit tests:
         test_core.py           unit tests for the core (Ahmed)
         cases/                 problem files for the 15+ test cases (Omar)
 
-## Team conventions (do not change without telling everyone)
+## Team conventions
 
 1. **Tree search.** No global explored set. A child may not revisit a node already on its own path.
 2. **Nodes created** = every node generated and added to the frontier (root included). Children
