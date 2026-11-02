@@ -25,6 +25,7 @@ NEAREST_NEIGHBOURS = 2   # each node may get extra edges to this many closest no
 
 
 def _distance(a: Tuple[int, int], b: Tuple[int, int]) -> float:
+    """Straight-line distance between two grid positions."""
     return math.hypot(a[0] - b[0], a[1] - b[1])
 
 
@@ -56,6 +57,7 @@ def random_problem(node_count: int, destination_count: int = 1, seed: int = 0,
     position = {i + 1: spot for i, spot in enumerate(spots)}
 
     def edge_cost(a: int, b: int) -> int:
+        """Edge cost: straight-line length scaled by 1.0-1.5 and rounded up, never below the length."""
         return max(1, math.ceil(_distance(position[a], position[b]) * rng.uniform(1.0, 1.5)))
 
     edges: Dict[Tuple[int, int], int] = {}
