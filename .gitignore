@@ -5,6 +5,7 @@ venv/
 .idea/
 .vscode/
 *.log
-results/
+results/*
+!results/*.csv
 .DS_Store
 Thumbs.db

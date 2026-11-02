@@ -1,4 +1,4 @@
-"""Research extension (Person C): visit ALL destinations with the shortest total walk.
+"""Research extension (Faisal): visit ALL destinations with the shortest total walk.
 
     python -m research <problem file> [auto|perm|dp|ucs]
 

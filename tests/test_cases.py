@@ -1,6 +1,6 @@
 """Checks every method against the hand-worked results for every file in tests/cases/.
 
-Owner: Person D. Run from the repository root:
+Owner: Omar. Run from the repository root:
     python -m unittest discover -s tests -v
 """
 

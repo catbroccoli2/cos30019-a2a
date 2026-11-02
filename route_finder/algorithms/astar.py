@@ -1,4 +1,4 @@
-"""A* Search (AS) - informed. Owner: Person B.
+"""A* Search (AS) - informed. Owner: Ramy.
 
 A* expands the frontier node with the lowest estimated total cost:
 

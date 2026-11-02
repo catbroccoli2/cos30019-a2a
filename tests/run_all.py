@@ -1,4 +1,4 @@
-"""Runs every search method on every test case and logs the results. Owner: Person D.
+"""Runs every search method on every test case and logs the results. Owner: Omar.
 
     python tests/run_all.py              print a table and write results/run_all.csv
     python tests/run_all.py --repeat 20  time each run 20 times and report the median

@@ -1,4 +1,4 @@
-"""Unit tests for CUS1 (Iterative Deepening DFS). Owner: Person C.
+"""Unit tests for CUS1 (Iterative Deepening DFS). Owner: Faisal.
 
 Run from the repository root:
     python -m unittest discover -s tests -v

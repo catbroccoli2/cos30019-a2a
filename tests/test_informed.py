@@ -1,4 +1,4 @@
-"""Unit tests for Person B's code: heuristics, GBFS, A* (AS) and CUS2 (IDA*).
+"""Unit tests for Ramy's code: heuristics, GBFS, A* (AS) and CUS2 (IDA*).
 
 Run from the repository root:
     python -m unittest discover -s tests -v

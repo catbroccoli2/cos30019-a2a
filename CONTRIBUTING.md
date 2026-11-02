@@ -17,7 +17,7 @@ pull request and tag them. This avoids merge conflicts and keeps tie-breaking in
 1. `git pull` on `main` before you start.
 2. Make your own branch: `git checkout -b b/informed-search` (use your letter as the prefix).
 3. Commit small and often, with clear messages ("Add Euclidean heuristic", not "update").
-4. Push your branch and open a pull request into `main`. Person A reviews and merges.
+4. Push your branch and open a pull request into `main`. Ahmed reviews and merges.
 5. Never commit directly to `main` and never force-push.
 
 Commit under your own name so the contribution statement is easy to back up:

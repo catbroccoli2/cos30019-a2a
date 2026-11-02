@@ -1,4 +1,4 @@
-"""Unit tests for Person A's code: parser, graph, frontiers, DFS and BFS, CLI.
+"""Unit tests for Ahmed's code: parser, graph, frontiers, DFS and BFS, CLI.
 
 Run from the repository root:
     python -m unittest discover -s tests -v

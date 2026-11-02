@@ -1,4 +1,4 @@
-"""Greedy Best-First Search (GBFS) - informed. Owner: Person B.
+"""Greedy Best-First Search (GBFS) - informed. Owner: Ramy.
 
 GBFS always expands the frontier node that LOOKS closest to a destination:
 

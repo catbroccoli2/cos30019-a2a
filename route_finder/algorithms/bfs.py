@@ -1,4 +1,4 @@
-"""Breadth-First Search (BFS) - uninformed. Owner: Person A.
+"""Breadth-First Search (BFS) - uninformed. Owner: Ahmed.
 
 BFS expands every node at depth d before any node at depth d + 1, so the goal
 it returns is reached with the FEWEST MOVES (not necessarily the lowest cost,

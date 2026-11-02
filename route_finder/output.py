@@ -5,8 +5,7 @@ Success:
     goal number_of_nodes
     path
 
-No goal reachable (the brief does not define this case - confirm the format
-with the tutor):
+No goal reachable (the brief does not define this case, this format is our choice):
     filename method
     No goal is reachable; number_of_nodes
 """

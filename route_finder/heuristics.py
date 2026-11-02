@@ -1,4 +1,4 @@
-"""Heuristic functions for the informed searches (GBFS, A*, CUS2). Owner: Person B.
+"""Heuristic functions for the informed searches (GBFS, A*, CUS2). Owner: Ramy.
 
 Two heuristics are provided, both built once per problem and cached per node:
 

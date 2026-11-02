@@ -1,4 +1,4 @@
-"""CUS2 - custom INFORMED search: IDA* on move count. Owner: Person B.
+"""CUS2 - custom INFORMED search: IDA* on move count. Owner: Ramy.
 
 Goal (from the brief): an informed method that finds a shortest path to a
 destination, where "shortest" means the FEWEST MOVES (edges), not lowest cost.

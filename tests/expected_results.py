@@ -1,4 +1,4 @@
-"""Hand-worked expected results for every problem file in tests/cases/. Owner: Person D.
+"""Hand-worked expected results for every problem file in tests/cases/. Owner: Omar.
 
 Each answer was traced by hand from the team conventions (README.md) and the
 rules in each algorithm's docstring BEFORE the program was run, so the test

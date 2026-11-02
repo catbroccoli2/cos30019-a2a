@@ -1,4 +1,4 @@
-"""Unit tests for the research feature (visit ALL destinations). Owner: Person C.
+"""Unit tests for the research feature (visit ALL destinations). Owner: Faisal.
 
 Run from the repository root:
     python -m unittest discover -s tests -v

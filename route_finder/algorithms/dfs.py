@@ -1,4 +1,4 @@
-"""Depth-First Search (DFS) - uninformed. Owner: Person A.
+"""Depth-First Search (DFS) - uninformed. Owner: Ahmed.
 
 DFS always expands the most recently generated node, so it follows one branch
 as deep as it can before backing up ("select one option, try it, go back when

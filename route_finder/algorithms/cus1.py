@@ -1,4 +1,4 @@
-"""CUS1 - Iterative Deepening Depth-First Search (IDDFS), uninformed. Owner: Person C.
+"""CUS1 - Iterative Deepening Depth-First Search (IDDFS), uninformed. Owner: Faisal.
 
 IDDFS runs a depth-limited DFS with limit 0, then 1, then 2, ... until a
 destination is popped. Like BFS it reaches a goal with the FEWEST MOVES (not
@@ -10,7 +10,7 @@ How it fits the team conventions:
   * Nodes are created only through one `SearchSpace` that lives for the whole
     search, so `number_of_nodes` is CUMULATIVE: the root and any node that is
     re-generated in a later deepening round are counted again each time.
-    (Confirm this choice with the team; it is the only place it is decided.)
+    
   * Each round uses the shared `StackFrontier`, so children are expanded in
     ascending node order and branches are explored most-recent-first,
     exactly as in DFS.
